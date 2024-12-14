@@ -30,11 +30,6 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx --no-install next build
 
-      - name: Debug
-        run: |
-          ls
-          cat ./next.config.js
-
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
