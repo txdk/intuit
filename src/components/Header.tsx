@@ -1,3 +1,4 @@
+import { BASE_PATH } from "@/constants/AppConstants";
 import Image from "next/image";
 
 export interface PageLink {
@@ -12,7 +13,7 @@ export default function Header({ links }: HeaderProps) {
     return (
         <header className='flex border-b py-3 px-4 sm:px-10 bg-gray-900 font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
             <div className='flex flex-wrap items-center gap-5 w-full'>
-                <a href=""><Image src={"/intuit.png"} alt="Intuit logo" width={50} height={50} />
+                <a href=""><Image src={`${BASE_PATH}/intuit.png`} alt="Intuit logo" width={50} height={50} />
                 </a>
 
                 <a className="font-[sans-serif] font-bold text-[18px]">Intuit</a>
