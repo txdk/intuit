@@ -1,8 +1,10 @@
 import { BASE_PATH } from "@/constants/AppConstants";
 import Image from "next/image";
+import NavBar from "./NavBar";
 
 export interface PageLink {
     pageName: string;
+    endpoint: string
 }
 
 interface HeaderProps {
@@ -18,19 +20,7 @@ export default function Header({ links }: HeaderProps) {
 
                 <a className="font-[sans-serif] font-bold text-[18px]">Intuit</a>
 
-                <ul
-                    className='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-                    {
-                        links.map((link) => {
-                            return (
-                                <li className='max-lg:border-b max-lg:py-3 px-3' key={link.pageName}>
-                                    <a href=''
-                                        className='lg:hover:text-[#007bff] text-slate-200 block font-semibold text-[15px]'>{link.pageName}</a>
-                                </li>
-                            );
-                        })
-                    }
-                </ul>
+                <NavBar links={links} />
 
                 <div className='flex lg:ml-auto max-lg:w-full'>
                 <div

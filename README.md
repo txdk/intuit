@@ -6,7 +6,12 @@ The site is deployed on GitHub pages: https://txdk.github.io/intuit/
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository and install the project's dependencies via:
+```bash
+npm install
+```
+
+To view the website, first run the development server:
 
 ```bash
 npm run dev
