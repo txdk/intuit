@@ -2,8 +2,8 @@ interface PostParams {
     pageId: string;
 }
 
-type PostPageProps = {
-    params: PostParams
+interface PostPageProps {
+    params: Promise<PostParams>
 }
 
 export async function generateStaticParams() {
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page( { params }: PostPageProps ) {
-    const { pageId } = await params;
+    const response = await params;
+    const pageId = response.pageId;
 
     return (
         <div className="text-justify text-2xl mx-20">
