@@ -3,6 +3,7 @@ import { PageLink } from "@/components/Header";
 const isProd = process.env.NODE_ENV === "production";
 
 export const BASE_PATH = isProd? "/intuit" : "";
+export const POST_DIRECTORY = "public/posts/";
 
 export const PAGE_LINKS: Array<PageLink> = [
   {

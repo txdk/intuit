@@ -3,7 +3,7 @@ export default function Page() {
         <div className="text-justify text-2xl mx-20">
             <h1 className="text-center text-6xl py-10">About Page</h1>
             <p className="pb-7">
-                Intuit is the passion project of a few good friends who are passionate
+                Intuit is the side project of a few good friends who are passionate
                 about education, with the driving mission centred around how we can
                 meaningfully improve the learning experience for all. It was born
                 out of this desire to create a community and positive attitude around
